@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - DCT GCC</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.webp">
+    <link rel="stylesheet" href="about.css" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="DCT GCC Logo">
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- Dropdown: Services -->
+                <li class="dropdown">
+                    <a href="index.html">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">BOT Service</a></li>
+                        <li><a href="#">Managed Services</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown: Portfolio -->
+                <li class="dropdown">
+                    <a href="index.html">Portfolio ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="press.html" class="black-text">Press</a></li>
+                <li><a href="contact.html" class="black-text">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn-consult">Consultation ↗</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- ===== About Hero Section ===== -->
+    <section class="about-hero">
+        <div class="about-text">
+            <h1>Let's Work Together</h1>
+            <p>Reach out to us for inquiries, support, or to explore how we can help your business thrive.</p>
+
+        </div>
+        <div class="about-image">
+            <img src="images/istockphoto.jpg" alt="About DCT GCC" />
+        </div>
+    </section>
+    <br> <br> <br>
+<section class="contact-section">
+    <div class="contact-container">
+        <!-- Left Side Info -->
+        <div class="contact-info">
+            <h3>Address:</h3>
+            <p>320 South Broad Street,<br>Ridgewood, NJ 07450</p><br><br>
+
+            <h3>Phone:</h3>
+            <p>+1 201 345 4141</p><br><br>
+
+            <h3>Email:</h3>
+            <p>info@dctinc.com</p><br><br>
+        </div>
+
+        <!-- Right Side Form -->
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject"><br><br>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea><br><br>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Inquiry</button><br>
+
+            <p class="terms">By submitting this form you agree with our <a href="#">Terms of Use</a>.</p>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="DCT GCC Logo" />
+            </div>
+            <div class="footer-contact">
+                <p>info@dct.com</p>
+                <p>+1 201 345 4141</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Case Study</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-middle">
+        <img src="images/hipaa-compliant-logo.svg" alt="HIPAA" />
+        <img src="images/Layer_1.png" alt="ISO" />
+        <img src="images/hitrust-logo.svg" alt="HITRUST" />
+        <img src="images/dsci-logo.svg" alt="DSCI" />
+        <img src="images/image001-1-1.png" alt="SOC 2" />
+    </div>
+
+    <div class="footer-bottom">
+        <p>All rights reserved © GCC 2025</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Trust and Compliance</a>
+        </div>
+    </div>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑ Top
+    </button>
+</footer>
+
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you! Your inquiry has been submitted successfully.");
+            this.reset();
+        });
+
+</script>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
