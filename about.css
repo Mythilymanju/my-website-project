@@ -26,7 +26,7 @@
     width: auto;
 }
 
-/* Navigation */
+/* ===== Navigation ===== */
 .nav-links {
     display: flex;
     list-style: none;
@@ -40,7 +40,6 @@
     transition: 0.3s;
 }
 
-/* Make "Press" and "Contact Us" black */
 .nav-links a.black-text {
     color: black;
 }
@@ -62,17 +61,59 @@
 .btn-consult:hover {
     background: red !important;
 }
+
 .black-text:hover {
     background: red !important;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d32f2f;
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #b71c1c;
+}
+
+/* ===== Menu Icon (Mobile) ===== */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
 }
 
 /* ===== About Hero Section ===== */
 .about-hero {
     display: flex;
     height: 80vh;
-}
-.black-text {
-    color: white !important;
 }
 
 .about-text {
@@ -99,15 +140,13 @@
 .about-image {
     flex: 1;
     overflow: hidden;
-    
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-color:black;
-    
+    background-color: black;
 }
 
 /* ===== About Content Section ===== */
@@ -128,22 +167,7 @@
     color: white;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-    .about-hero {
-        flex-direction: column;
-    }
-
-    .about-text {
-        padding: 60px 40px;
-        text-align: center;
-        
-    }
-
-    .about-content {
-        padding: 50px 30px;
-    }
-}
+/* ===== Pioneers Section ===== */
 .pioneers-section {
     text-align: center;
     padding: 80px 100px;
@@ -195,7 +219,6 @@
 
 .pioneer-card .highlight {
     color: #d32f2f;
-    /* red accent like DCT site */
 }
 
 .pioneer-card .percent {
@@ -208,6 +231,8 @@
     color: #000;
     line-height: 1.4;
 }
+
+/* ===== Transform Section ===== */
 .transform-section {
     text-align: center;
     padding: 60px 100px;
@@ -247,7 +272,6 @@
 
 .transform-card:hover img {
     filter: grayscale(0%) brightness(1.1);
-    background: linear-gradient(to top, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.2));
     transform: scale(1.05);
 }
 
@@ -272,6 +296,8 @@
     line-height: 1.6;
     color: #ddd;
 }
+
+/* ===== Transform Business Section ===== */
 .transform-business {
     text-align: center;
     padding: 100px 250px;
@@ -305,10 +331,11 @@
 
 .cta-btn:hover {
     background-color: #ff7043;
-    /* light orange hover */
     color: #fff;
     transform: scale(1.05);
 }
+
+/* ===== Footer ===== */
 .footer {
     background-color: #000;
     color: #fff;
@@ -340,8 +367,6 @@
     display: flex;
     gap: 25px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .footer-links a {
@@ -429,41 +454,122 @@
     background-color: #d32f2f;
     color: #fff;
 }
-/* ===== Dropdown Menu ===== */
-.dropdown {
-    position: relative;
+
+/* ========================================================= */
+/* ======== Responsive Media Queries ======================= */
+/* ========================================================= */
+
+/* Tablet (max-width: 991px) */
+@media (max-width: 991px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding: 60px 40px;
+    }
+
+    .about-text h1 {
+        font-size: 45px;
+    }
+
+    .about-content {
+        padding: 50px 40px;
+    }
+
+    .transform-business {
+        padding: 80px 100px;
+    }
 }
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #d32f2f;
-    list-style: none;
-    padding: 10px 0;
-    display: none;
-    min-width: 180px;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .menu-icon {
+        display: block;
+    }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        border-radius: 10px;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
 
-/* Dropdown links */
-.dropdown-menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    font-size: 14px;
-    transition: background 0.3s;
-}
+    /* show when hover */
+    .menu-icon:hover+nav .nav-links,
+    nav:hover .nav-links {
+        opacity: 1;
+        max-height: 400px;
+    }
 
-/* Hover effect for dropdown items */
-.dropdown-menu li a:hover {
-    background-color: #b71c1c;
+    .nav-links a {
+        color: white;
+        display: block;
+        padding: 12px 30px;
+        text-align: center;
+    }
+
+    .btn-consult {
+        display: none;
+    }
+
+    .about-text {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
+
+    .pioneers-section {
+        padding: 60px 20px;
+    }
+
+    .transform-section {
+        padding: 40px 20px;
+    }
+
+    .transform-business {
+        padding: 60px 20px;
+    }
+
+    .footer {
+        padding: 40px 30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-middle {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scroll-top {
+        right: 20px;
+        bottom: 20px;
+    }
 }
